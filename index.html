@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Briefing Matin — Domaine de la Yole</title>
+<title>Briefing Matin â Domaine de la Yole</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#f0f4f8;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
@@ -20,16 +20,16 @@ button:hover{background:#2a4a7f}
 </head>
 <body>
 <div class="box">
-  <div class="logo">☀️</div>
+  <div class="logo">âï¸</div>
   <h1>Briefing Matin</h1>
-  <div class="sub">Domaine de la Yole &middot; Accès sécurisé</div>
-  <input type="password" id="pin" placeholder="••••" maxlength="6"
+  <div class="sub">Domaine de la Yole &middot; AccÃ¨s sÃ©curisÃ©</div>
+  <input type="password" id="pin" placeholder="â¢â¢â¢â¢" maxlength="6"
          onkeydown="if(event.key==='Enter')check()" autofocus />
-  <button onclick="check()">Accéder au briefing</button>
-  <div class="err" id="err">Code incorrect — réessaie</div>
+  <button onclick="check()">AccÃ©der au briefing</button>
+  <div class="err" id="err">Code incorrect â rÃ©essaie</div>
 </div>
 <script>
-const PIN = "1011";
+const PIN = "1278";
 function check(){
   if(document.getElementById('pin').value === PIN){
     window.location.href='briefing.html';
