@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefing Matin — Domaine de la Yole</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f4f8;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.box{background:#fff;border-radius:12px;padding:40px 48px;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;max-width:360px;width:90%}
+.logo{font-size:40px;margin-bottom:8px}
+h1{color:#1a365d;font-size:20px;margin-bottom:4px}
+.sub{color:#718096;font-size:13px;margin-bottom:28px}
+input{width:100%;border:2px solid #e2e8f0;border-radius:8px;padding:12px;font-size:24px;text-align:center;letter-spacing:10px;outline:none;transition:.2s}
+input:focus{border-color:#3182ce}
+button{margin-top:14px;width:100%;background:#1a365d;color:#fff;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:bold;cursor:pointer;transition:.2s}
+button:hover{background:#2a4a7f}
+.err{color:#c53030;font-size:13px;margin-top:10px;display:none}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="logo">☀️</div>
+  <h1>Briefing Matin</h1>
+  <div class="sub">Domaine de la Yole &middot; Accès sécurisé</div>
+  <input type="password" id="pin" placeholder="••••" maxlength="6"
+         onkeydown="if(event.key==='Enter')check()" autofocus />
+  <button onclick="check()">Accéder au briefing</button>
+  <div class="err" id="err">Code incorrect — réessaie</div>
+</div>
+<script>
+const PIN = "1011";
+function check(){
+  if(document.getElementById('pin').value === PIN){
+    window.location.href='briefing.html';
+  } else {
+    document.getElementById('err').style.display='block';
+    document.getElementById('pin').value='';
+    document.getElementById('pin').focus();
+  }
+}
+</script>
+</body>
+</html>
